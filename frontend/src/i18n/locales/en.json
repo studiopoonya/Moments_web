@@ -1,0 +1,310 @@
+{
+  "nav": {
+    "tentang": "About",
+    "layanan": "Services",
+    "galeri": "Portfolio",
+    "paket": "Pricing",
+    "kontak": "Contact",
+    "booking": "Book Now"
+  },
+  "social": {
+    "title": "Follow Us"
+  },
+  "hero": {
+    "brandName": "Poonya Moments",
+    "brandSub": "by Studio Poonya",
+    "taglinePrefix": "We can serve all kinds of events like",
+    "subtitle": "Premium photobooth rental for every precious moment.",
+    "ctaBooking": "Book Now",
+    "ctaPaket": "View Packages",
+    "productAlt": "Poonya Moments photobooth product photo",
+    "productHint": "Real product photo will be placed here"
+  },
+  "stats": {
+    "events": "Successful Events",
+    "experienceValue": "5 Yrs",
+    "experience": "Experience",
+    "rating": "Rating",
+    "customers": "Happy Customers",
+    "area": "Jabodetabek",
+    "areaLabel": "Service Area"
+  },
+  "about": {
+    "eyebrow": "About the Product",
+    "title": "Precious moments, with a touch of elegance",
+    "body": "Poonya Moments is the second product from PT. Poonya Kita Bersama — a photobooth rental service for weddings, birthday parties, corporate events, community events, and exhibitions. Designed for the premium market, with a service experience that's polished, warm, and classy.",
+    "quote": "Premium quality, at an affordable price."
+  },
+  "products": {
+    "eyebrow": "Product Showcase",
+    "title": "A photobooth showcase that grabs attention",
+    "slotLabel": "Product Image Slot",
+    "slotHint": "Real product photo will be placed here",
+    "placeholderNote": "*This product's description & features are still placeholders, real details coming soon.",
+    "items": [
+      {
+        "badge": "Photobooth Event",
+        "name": "Photobooth Event",
+        "desc": "Our classic go-to photobooth — a compact rounded design with a luxurious feel, great for weddings, birthdays, and corporate events.",
+        "tags": ["Unlimited Print", "Custom Ring Light", "Any Event Type"]
+      },
+      {
+        "badge": "AI Photobooth",
+        "name": "AI Photobooth",
+        "desc": "A photobooth with an AI-powered touch for a more personal, interactive photo experience.",
+        "tags": ["Placeholder"],
+        "placeholder": true
+      },
+      {
+        "badge": "Mingle Photobooth",
+        "name": "Mingle Photobooth",
+        "desc": "A roaming photobooth that moves through the venue to keep guests mingling and snapping photos all night.",
+        "tags": ["Placeholder"],
+        "placeholder": true
+      },
+      {
+        "badge": "Virtual Photobooth",
+        "name": "Virtual Photobooth",
+        "desc": "A virtual photobooth to reach guests joining your hybrid event online.",
+        "tags": ["Placeholder"],
+        "placeholder": true
+      }
+    ]
+  },
+  "events": {
+    "eyebrow": "Event Types",
+    "title": "For every kind of celebration",
+    "items": [
+      { "title": "Wedding", "text": "Capture your dream wedding with Poonya Moments." },
+      { "title": "Birthday Party", "text": "Celebrate birthdays with unlimited fun." },
+      { "title": "Corporate Event", "text": "Bring a professional touch to every company event." },
+      { "title": "Community Event", "text": "Bring your community together in one frame." },
+      { "title": "Exhibition", "text": "Instantly draw visitors to your booth." }
+    ]
+  },
+  "whyus": {
+    "eyebrow": "Why Choose Us",
+    "title": "Not Just A",
+    "titleAccent": "Photobooth",
+    "subtitle": "We deliver a premium photography experience that makes every event unforgettable.",
+    "items": [
+      { "title": "Heart to Heart Service", "text": "Friendly, professional staff who welcome your guests warmly." },
+      { "title": "Premium yet Affordable", "text": "Premium-grade quality at a price that still makes sense." },
+      { "title": "Quality & Unlimited Prints", "text": "Sharp, long-lasting prints, unlimited throughout the event." },
+      { "title": "Experienced Crew", "text": "Used to handling events of every scale, from intimate to gala." },
+      { "title": "Fast Setup", "text": "Our compact design is ready in about 30 minutes before the event starts." },
+      { "title": "Custom Frame & Ring Light", "text": "Templates and ring light tailored to your event theme for flawless photos." }
+    ]
+  },
+  "booking": {
+    "eyebrow": "How It Works",
+    "title": "Easy in",
+    "titleAccent": "4 Steps",
+    "subtitle": "From booking to the photo session, the process is simple and professional.",
+    "steps": [
+      { "title": "Booking", "text": "Pick a package, set your event date, and reach us on WhatsApp or fill out the form. Confirmed within 24 hours." },
+      { "title": "Preparation", "text": "Our team prepares a custom frame matching your event theme. Setup happens 30 minutes before the event." },
+      { "title": "Photo Session", "text": "Guests take unlimited photos! Our crew is on hand to help, with fun props and professional lighting." },
+      { "title": "Print & Share", "text": "Photos are printed on the spot and digital files are sent via QR Code or email. Memories ready to take home!" }
+    ]
+  },
+  "included": {
+    "banner": "FULL FACILITIES IN EVERY PACKAGE",
+    "badge": "Included in every package ✓",
+    "items": [
+      "Unlimited Prints",
+      "Cover Frames",
+      "Studio Lighting",
+      "Soft-File",
+      "QR Scan",
+      "Email Sharing",
+      "Funny Props",
+      "Sequin Backdrop",
+      "Professional Staff",
+      "Custom Design"
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Choose the package that fits your event",
+    "note": "*Example pricing — contact us for the latest offer",
+    "mulaiDari": "Starting from",
+    "penawaran": "Custom quote",
+    "terlaris": "MOST POPULAR",
+    "pilihPaket": "Choose This Package",
+    "hubungiKami": "Contact Us",
+    "fasilitasTermasuk": "All {{count}} facilities included",
+    "packages": [
+      {
+        "emoji": "🎞️",
+        "name": "2-Hour Package",
+        "meta": "2 Hours · 2R or 4R prints",
+        "price": "Rp1,799,000",
+        "desc": "Great for small to medium events without cutting quality."
+      },
+      {
+        "emoji": "⭐",
+        "name": "3-Hour Package",
+        "meta": "3 Hours · 2R or 4R prints",
+        "price": "Rp2,299,000",
+        "desc": "The most popular choice for any type of event."
+      },
+      {
+        "emoji": "🎉",
+        "name": "Photo + Video Bundle",
+        "meta": "3 Hours · Photobooth + Videobooth",
+        "price": "Rp4,150,000",
+        "desc": "Ideal for weddings and large events wanting full documentation."
+      },
+      {
+        "emoji": "✨",
+        "name": "Custom Package",
+        "meta": "Flexible duration & setup",
+        "price": "Contact Us",
+        "desc": "A tailored offer for corporate needs or large-scale events."
+      }
+    ]
+  },
+  "clients": {
+    "eyebrow": "Our Clients",
+    "title": "Trusted by well-known brands & clients",
+    "note": "*Example brand names from past event portfolios",
+    "names": ["Moeloet", "Tiki", "Nutana", "Cinepolis", "Trueve Makeup", "Bridestory Market"]
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "Trusted by happy clients",
+    "subtitle": "Stories from some of the clients who've used Poonya Moments at their events.",
+    "note": "*Example testimonials — will be replaced with real client reviews.",
+    "row1": [
+      { "name": "Amanda Putri", "handle": "@amandaputri", "text": "The photos turned out great and the prints were neat. The crew was friendly and on time too!" },
+      { "name": "Rizky Firmansyah", "handle": "@rizkyf", "text": "The booth is compact but the photo quality is premium. Our wedding guests kept lining up for photos." },
+      { "name": "Clara Wijaya", "handle": "@clarawijaya", "text": "The props were so cute, and the unlimited prints really were unlimited. Worth the price." },
+      { "name": "Denny Saputra", "handle": "@dennysaputra", "text": "For our corporate event, the setup was fast and everything looked very professional." }
+    ],
+    "row2": [
+      { "name": "Novita Sari", "handle": "@novitasari", "text": "Communication was smooth from booking to the event day, and the admin responded quickly too." },
+      { "name": "Bagas Pratama", "handle": "@bagaspratama", "text": "The ring light made the photos flawless even though the venue was a bit dim." },
+      { "name": "Sabrina Halim", "handle": "@sabrinahalim", "text": "Fair price for this level of quality. We'll definitely use them again for our next event." },
+      { "name": "Fajar Ramadhan", "handle": "@fajarr", "text": "Their team was quick to sort out a small technical hiccup without disrupting the event." }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Portfolio",
+    "title": "Moments we've already captured",
+    "note": "*Example layout — photos will be replaced with real client documentation.",
+    "items": [
+      "The Wedding of Andika & Monic",
+      "Tiki 55th Anniversary",
+      "Gala Sky's Birthday Party",
+      "Poonya x Community Fest",
+      "Exhibition Booth — Jakarta Expo",
+      "Sahil's Open House"
+    ]
+  },
+  "promo": {
+    "eyebrow": "Current Promotions",
+    "title": "Special offers right now",
+    "subtitle": "Click one to see the details.",
+    "cta": "Ask About This Promo",
+    "items": [
+      {
+        "tag": "Year-End Discount",
+        "title": "Photobooth Year-End Deals",
+        "detail": "Book a 3-hour package before year-end and get a special Year-End Deals price — great for office gatherings or family parties."
+      },
+      {
+        "tag": "Independence Special",
+        "title": "August Special Promo",
+        "detail": "Celebrate independence day with a photobooth at your community or office event — comes with bonus red-and-white themed props."
+      },
+      {
+        "tag": "3-Hour Value Bundle",
+        "title": "Photo + Video Bundle",
+        "detail": "Combine photobooth and videobooth in one 3-hour package at a better price than booking separately."
+      },
+      {
+        "tag": "For Your Big Day",
+        "title": "Wedding Season Package",
+        "detail": "A complete package for wedding season: unlimited prints, professional crew, and a custom frame matching your wedding theme."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently Asked",
+    "titleAccent": "Questions",
+    "subtitle": "Can't find your answer? Reach us directly on WhatsApp.",
+    "moreQuestion": "Still have other questions?",
+    "askWa": "Ask via WhatsApp",
+    "items": [
+      { "q": "How long does setup take?", "a": "Photobooth setup usually takes about 30 minutes, and our team arrives early to make sure everything is ready before the event starts." },
+      { "q": "Can I cancel or reschedule?", "a": "Yes, contact our admin at least 3 days before the event to reschedule the date. Cancellation policy will be explained at booking confirmation." },
+      { "q": "Can the photobooth be used outdoors?", "a": "Yes, as long as there's a power source and a reasonably shaded area. Our team can help with a location survey if needed." },
+      { "q": "How much space is needed for setup?", "a": "About a 2x2 meter area is enough for the booth, backdrop, and comfortable guest space." },
+      { "q": "Is there a minimum rental duration?", "a": "Our smallest package starts at 2 hours, suitable for small to medium events." },
+      { "q": "Are digital files provided after the event?", "a": "Yes, all soft-copy photos can be downloaded via QR Code or sent by email after the event." },
+      { "q": "How does payment work, and is a deposit required?", "a": "Bookings are confirmed with a deposit to lock in the date, with the balance settled before or on the event day as agreed." },
+      { "q": "Do you serve areas outside Jabodetabek?", "a": "For now we focus on the Jabodetabek area. For other locations, please contact us to discuss further." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Have a question? We're happy to help",
+    "subtitle": "Fill out the form below or reach us directly — our team is ready to help.",
+    "connect": "Connect",
+    "heading": "Get in Touch",
+    "desc": "Send us your event details and we'll get back to you shortly.",
+    "namePlaceholder": "Full name",
+    "emailPlaceholder": "you@company.com",
+    "subjectPlaceholder": "Event type (e.g. Wedding, Birthday)",
+    "messagePlaceholder": "Tell us a bit about your event...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Sent! We'll get back to you shortly.",
+    "error": "Failed to send, please try again or contact us via WhatsApp.",
+    "placeholderNote": "*Phone number & address are still placeholders.",
+    "mapNote": "*Example address, will be updated.",
+    "studioLabel": "Studio Poonya"
+  },
+  "finalCta": {
+    "eyebrow": "Don't Miss Out",
+    "title": "Ready to Make Your Event",
+    "titleAccent": "Unforgettable?",
+    "subtitle": "Contact us now. Limited promo for the first 20 bookings this month!",
+    "claimBtn": "Claim the Promo Now →",
+    "waBtn": "WhatsApp Us"
+  },
+  "footer": {
+    "desc": "A trusted premium photobooth service for weddings, birthdays, corporate events, and exhibitions. Capture every precious moment with us.",
+    "layanan": "Services",
+    "informasi": "Information",
+    "layananItems": ["Wedding Packages", "Corporate Packages", "Birthday Packages", "Custom Events"],
+    "informasiItems": ["About Us", "How Booking Works", "FAQ", "Contact"],
+    "rights": "All rights reserved.",
+    "madeWith": "Made with 🤍 in Indonesia",
+    "placeholderNote": "All contact details & prices on this page are placeholder examples."
+  },
+  "popup": {
+    "badge": "Special Offer 🎉",
+    "titleThanks": "Thank you!",
+    "descThanks": "Our team will reach out to you on WhatsApp shortly to confirm your discount.",
+    "close": "Close",
+    "title": "Claim Now & Get a",
+    "titleAccent": "Booking Discount!",
+    "desc": "Fill in your details below and our team will follow up right away on WhatsApp.",
+    "nameLabel": "Full Name",
+    "namePlaceholder": "John Doe",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "0812-3456-7890",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "budi@email.com",
+    "submit": "Claim Discount",
+    "sending": "Sending...",
+    "error": "Failed to send, please try again.",
+    "consent": "By submitting this form, you agree to be contacted by our team via WhatsApp."
+  },
+  "wa": {
+    "chatNow": "Chat Now"
+  }
+}

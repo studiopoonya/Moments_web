@@ -1,0 +1,310 @@
+{
+  "nav": {
+    "tentang": "Tentang",
+    "layanan": "Layanan",
+    "galeri": "Galeri",
+    "paket": "Paket",
+    "kontak": "Kontak",
+    "booking": "Booking Sekarang"
+  },
+  "social": {
+    "title": "Ikuti Kami"
+  },
+  "hero": {
+    "brandName": "Poonya Moments",
+    "brandSub": "by Studio Poonya",
+    "taglinePrefix": "Kami bisa melayani berbagai jenis acara seperti",
+    "subtitle": "Rental photobooth premium untuk setiap momen berharga Anda.",
+    "ctaBooking": "Booking Sekarang",
+    "ctaPaket": "Lihat Paket",
+    "productAlt": "Foto produk photobooth Poonya Moments",
+    "productHint": "Foto produk asli akan ditempatkan di sini"
+  },
+  "stats": {
+    "events": "Event Sukses",
+    "experienceValue": "5 Thn",
+    "experience": "Pengalaman",
+    "rating": "Rating",
+    "customers": "Pelanggan Puas",
+    "area": "Jabodetabek",
+    "areaLabel": "Area Layanan"
+  },
+  "about": {
+    "eyebrow": "Tentang Produk",
+    "title": "Momen berharga, dalam sentuhan mewah",
+    "body": "Poonya Moments adalah produk kedua dari PT. Poonya Kita Bersama — layanan rental photobooth untuk wedding, birthday party, corporate event, community event, hingga exhibition. Dirancang untuk pasar premium, dengan pengalaman layanan yang rapi, hangat, dan berkelas.",
+    "quote": "Premium quality, at an affordable price."
+  },
+  "products": {
+    "eyebrow": "Product Showcase",
+    "title": "Etalase photobooth yang mencuri perhatian",
+    "slotLabel": "Product Image Slot",
+    "slotHint": "Foto produk asli akan ditempatkan di sini",
+    "placeholderNote": "*Deskripsi & fitur produk ini masih placeholder, akan dilengkapi dengan detail asli.",
+    "items": [
+      {
+        "badge": "Photobooth Event",
+        "name": "Photobooth Event",
+        "desc": "Photobooth klasik andalan kami — desain rounded compact bernuansa mewah, cocok untuk wedding, birthday, hingga corporate event.",
+        "tags": ["Unlimited Print", "Ring Light Custom", "Semua Jenis Acara"]
+      },
+      {
+        "badge": "AI Photobooth",
+        "name": "AI Photobooth",
+        "desc": "Photobooth dengan sentuhan teknologi AI untuk pengalaman foto yang lebih personal dan interaktif.",
+        "tags": ["Placeholder"],
+        "placeholder": true
+      },
+      {
+        "badge": "Mingle Photobooth",
+        "name": "Mingle Photobooth",
+        "desc": "Photobooth yang bisa berkeliling menemani tamu bersosialisasi di sepanjang acara.",
+        "tags": ["Placeholder"],
+        "placeholder": true
+      },
+      {
+        "badge": "Virtual Photobooth",
+        "name": "Virtual Photobooth",
+        "desc": "Photobooth virtual untuk menjangkau tamu yang hadir secara online di acara hybrid kamu.",
+        "tags": ["Placeholder"],
+        "placeholder": true
+      }
+    ]
+  },
+  "events": {
+    "eyebrow": "Jenis Event",
+    "title": "Untuk setiap jenis perayaan",
+    "items": [
+      { "title": "Wedding", "text": "Abadikan wedding impianmu bersama Poonya Moments." },
+      { "title": "Birthday Party", "text": "Rayakan ulang tahun dengan keseruan tanpa batas." },
+      { "title": "Corporate Event", "text": "Tampilkan kesan profesional di setiap acara perusahaan." },
+      { "title": "Community Event", "text": "Satukan kebersamaan komunitas dalam satu bingkai." },
+      { "title": "Exhibition", "text": "Tarik perhatian pengunjung booth Anda seketika." }
+    ]
+  },
+  "whyus": {
+    "eyebrow": "Kenapa Pilih Kami",
+    "title": "Bukan Sekadar",
+    "titleAccent": "Photobooth",
+    "subtitle": "Kami menghadirkan pengalaman fotografi premium yang membuat setiap acara tak terlupakan.",
+    "items": [
+      { "title": "Heart to Heart Service", "text": "Staff ramah dan profesional yang melayani tamu Anda dengan hangat." },
+      { "title": "Premium tapi Affordable", "text": "Kualitas kelas premium dengan harga yang tetap masuk akal." },
+      { "title": "Print Berkualitas & Unlimited", "text": "Cetak foto tajam, tahan lama, dan tanpa batas selama acara." },
+      { "title": "Crew Berpengalaman", "text": "Terbiasa menangani berbagai skala acara, dari intimate hingga gala." },
+      { "title": "Setup Cepat", "text": "Desain compact kami siap terpasang sekitar 30 menit sebelum acara dimulai." },
+      { "title": "Custom Frame & Ring Light", "text": "Template dan ring light disesuaikan dengan tema acara untuk hasil foto flawless." }
+    ]
+  },
+  "booking": {
+    "eyebrow": "Cara Kerja",
+    "title": "Mudah dalam",
+    "titleAccent": "4 Langkah",
+    "subtitle": "Proses booking sampai sesi foto berjalan sangat simpel dan profesional.",
+    "steps": [
+      { "title": "Booking", "text": "Pilih paket, tentukan tanggal acara, dan hubungi kami via WhatsApp atau isi form. Konfirmasi dalam 1×24 jam." },
+      { "title": "Persiapan", "text": "Tim kami menyiapkan custom frame sesuai tema acara Anda. Setup peralatan 30 menit sebelum acara dimulai." },
+      { "title": "Sesi Foto", "text": "Tamu bebas berfoto sepuasnya! Crew kami siap membantu, dengan properti lucu dan lighting profesional." },
+      { "title": "Cetak & Share", "text": "Foto langsung dicetak di tempat dan file digital dikirim via QR Code atau email. Kenangan siap dibawa pulang!" }
+    ]
+  },
+  "included": {
+    "banner": "FASILITAS LENGKAP DI SEMUA PAKET",
+    "badge": "Termasuk semua paket ✓",
+    "items": [
+      "Unlimited Prints",
+      "Cover Frames",
+      "Studio Lighting",
+      "Soft-File",
+      "QR Scan",
+      "Email Sharing",
+      "Funny Property",
+      "Sequin Backdrop",
+      "Professional Staff",
+      "Custom Design"
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Harga Paket",
+    "title": "Pilih paket sesuai acara Anda",
+    "note": "*Harga contoh, hubungi kami untuk penawaran terbaru",
+    "mulaiDari": "Mulai dari",
+    "penawaran": "Penawaran",
+    "terlaris": "TERLARIS",
+    "pilihPaket": "Pilih Paket Ini",
+    "hubungiKami": "Hubungi Kami",
+    "fasilitasTermasuk": "Semua {{count}} fasilitas lengkap termasuk",
+    "packages": [
+      {
+        "emoji": "🎞️",
+        "name": "Paket 2 Jam",
+        "meta": "2 Jam · Cetak 2R atau 4R",
+        "price": "Rp1.799.000",
+        "desc": "Cocok untuk acara kecil hingga menengah tanpa mengurangi kualitas."
+      },
+      {
+        "emoji": "⭐",
+        "name": "Paket 3 Jam",
+        "meta": "3 Jam · Cetak 2R atau 4R",
+        "price": "Rp2.299.000",
+        "desc": "Pilihan paling populer untuk semua jenis acara."
+      },
+      {
+        "emoji": "🎉",
+        "name": "Bundling Photo + Video",
+        "meta": "3 Jam · Photobooth + Videobooth",
+        "price": "Rp4.150.000",
+        "desc": "Ideal untuk pernikahan dan event besar yang ingin dokumentasi lengkap."
+      },
+      {
+        "emoji": "✨",
+        "name": "Paket Custom",
+        "meta": "Durasi & setup fleksibel",
+        "price": "Contact Us",
+        "desc": "Penawaran khusus untuk kebutuhan korporat atau acara skala besar."
+      }
+    ]
+  },
+  "clients": {
+    "eyebrow": "Our Clients",
+    "title": "Dipercaya oleh brand & klien ternama",
+    "note": "*Nama brand contoh dari portofolio event sebelumnya",
+    "names": ["Moeloet", "Tiki", "Nutana", "Cinepolis", "Trueve Makeup", "Bridestory Market"]
+  },
+  "testimonials": {
+    "eyebrow": "Testimoni",
+    "title": "Dipercaya oleh klien yang puas",
+    "subtitle": "Cerita dari sebagian klien yang sudah menggunakan Poonya Moments di acara mereka.",
+    "note": "*Testimoni contoh — akan diganti dengan review asli dari klien.",
+    "row1": [
+      { "name": "Amanda Putri", "handle": "@amandaputri", "text": "Fotonya bagus banget dan hasil print-nya rapi. Crew-nya juga ramah, on time pula!" },
+      { "name": "Rizky Firmansyah", "handle": "@rizkyf", "text": "Booth-nya compact tapi kualitas fotonya premium. Tamu wedding kami betah antre foto." },
+      { "name": "Clara Wijaya", "handle": "@clarawijaya", "text": "Props-nya lucu-lucu, unlimited print-nya beneran nggak dibatesin. Worth it harganya." },
+      { "name": "Denny Saputra", "handle": "@dennysaputra", "text": "Buat corporate event kita, setup-nya cepat dan hasilnya terlihat profesional banget." }
+    ],
+    "row2": [
+      { "name": "Novita Sari", "handle": "@novitasari", "text": "Dari booking sampai hari-H komunikasinya lancar, respon admin-nya juga cepat." },
+      { "name": "Bagas Pratama", "handle": "@bagaspratama", "text": "Ring light-nya bikin hasil foto flawless walau venue-nya agak gelap." },
+      { "name": "Sabrina Halim", "handle": "@sabrinahalim", "text": "Harga masuk akal untuk kualitas segini. Bakal pakai lagi buat acara berikutnya." },
+      { "name": "Fajar Ramadhan", "handle": "@fajarr", "text": "Tim-nya sigap pas ada kendala teknis kecil, langsung dibantu tanpa mengganggu acara." }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Portfolio",
+    "title": "Momen yang sudah kami abadikan",
+    "note": "*Contoh layout — foto akan diganti dengan dokumentasi asli klien.",
+    "items": [
+      "The Wedding of Andika & Monic",
+      "Tiki 55th Anniversary",
+      "Gala Sky's Birthday Party",
+      "Poonya x Community Fest",
+      "Exhibition Booth — Jakarta Expo",
+      "Sahil's Open House"
+    ]
+  },
+  "promo": {
+    "eyebrow": "Promo Berjalan",
+    "title": "Penawaran spesial saat ini",
+    "subtitle": "Klik salah satu untuk lihat detailnya.",
+    "cta": "Tanya Promo Ini",
+    "items": [
+      {
+        "tag": "Diskon Akhir Tahun",
+        "title": "Photobooth Year-End Deals",
+        "detail": "Booking paket 3 jam sebelum akhir tahun dan dapatkan harga spesial edisi Year-End Deals — cocok untuk gathering kantor maupun pesta keluarga."
+      },
+      {
+        "tag": "Merdeka Bersama Poonya",
+        "title": "Promo Spesial Agustusan",
+        "detail": "Rayakan kemerdekaan dengan photobooth di acara 17-an komunitas atau kantor kamu — ada bonus properti bertema merah putih."
+      },
+      {
+        "tag": "Paket Hemat 3 Jam",
+        "title": "Bundling Photo + Video",
+        "detail": "Gabungkan photobooth dan videobooth dalam satu paket 3 jam dengan harga lebih hemat dibanding pesan terpisah."
+      },
+      {
+        "tag": "Untuk Hari Bahagiamu",
+        "title": "Wedding Season Package",
+        "detail": "Paket lengkap untuk musim pernikahan: unlimited print, crew profesional, dan custom frame sesuai tema wedding kamu."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Pertanyaan yang",
+    "titleAccent": "Sering Ditanya",
+    "subtitle": "Tidak menemukan jawaban? Langsung hubungi kami via WhatsApp.",
+    "moreQuestion": "Masih ada pertanyaan lain?",
+    "askWa": "Tanya via WhatsApp",
+    "items": [
+      { "q": "Berapa lama waktu yang dibutuhkan untuk setup?", "a": "Setup photobooth biasanya memakan waktu sekitar 30 menit, dan tim kami datang lebih awal untuk memastikan semuanya siap sebelum acara dimulai." },
+      { "q": "Apakah bisa cancel atau reschedule?", "a": "Bisa, hubungi admin kami minimal H-3 sebelum acara untuk reschedule tanggal. Kebijakan pembatalan akan diinformasikan saat konfirmasi booking." },
+      { "q": "Apakah photobooth bisa untuk event outdoor?", "a": "Bisa, selama ada sumber listrik dan area yang cukup teduh. Tim kami akan membantu survei lokasi jika diperlukan." },
+      { "q": "Berapa ukuran area yang dibutuhkan untuk pemasangan?", "a": "Cukup area sekitar 2x2 meter untuk booth, backdrop, dan ruang gerak tamu yang nyaman." },
+      { "q": "Apakah ada minimum durasi sewa?", "a": "Paket termudah kami mulai dari 2 jam, cocok untuk acara kecil hingga menengah." },
+      { "q": "Apakah file digital diberikan setelah acara?", "a": "Ya, seluruh foto softcopy dapat diunduh melalui QR Code atau dikirim ke email setelah acara selesai." },
+      { "q": "Bagaimana cara pembayaran dan apakah ada DP?", "a": "Booking dikonfirmasi dengan DP untuk mengunci tanggal, sisanya dilunasi sebelum atau di hari acara sesuai kesepakatan." },
+      { "q": "Apakah tersedia area layanan di luar Jabodetabek?", "a": "Untuk saat ini kami fokus melayani area Jabodetabek. Untuk lokasi lain, silakan hubungi kami untuk diskusi lebih lanjut." }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Kontak",
+    "title": "Ada pertanyaan? Kami siap membantu",
+    "subtitle": "Isi form di bawah atau hubungi kami langsung — tim kami siap membantu.",
+    "connect": "Connect",
+    "heading": "Hubungi Kami",
+    "desc": "Kirim detail acaramu dan kami akan segera menghubungi balik.",
+    "namePlaceholder": "Nama lengkap",
+    "emailPlaceholder": "you@company.com",
+    "subjectPlaceholder": "Jenis acara (mis. Wedding, Birthday)",
+    "messagePlaceholder": "Ceritakan sedikit tentang acaramu...",
+    "send": "Kirim Pesan",
+    "sending": "Mengirim...",
+    "sent": "Terkirim! Kami akan segera menghubungi Anda.",
+    "error": "Gagal mengirim, coba lagi atau hubungi kami via WhatsApp.",
+    "placeholderNote": "*Nomor & alamat masih placeholder.",
+    "mapNote": "*Alamat contoh, akan diperbarui.",
+    "studioLabel": "Studio Poonya"
+  },
+  "finalCta": {
+    "eyebrow": "Jangan Lewatkan",
+    "title": "Siap Membuat Acara Anda Tak",
+    "titleAccent": "Terlupakan?",
+    "subtitle": "Hubungi kami sekarang. Promo terbatas untuk 20 pemesan pertama bulan ini!",
+    "claimBtn": "Klaim Promo Sekarang →",
+    "waBtn": "WhatsApp Kami"
+  },
+  "footer": {
+    "desc": "Layanan photobooth premium terpercaya untuk wedding, birthday, corporate, hingga exhibition. Abadikan setiap momen berharga bersama kami.",
+    "layanan": "Layanan",
+    "informasi": "Informasi",
+    "layananItems": ["Paket Wedding", "Paket Corporate", "Paket Birthday", "Custom Event"],
+    "informasiItems": ["Tentang Kami", "Cara Booking", "FAQ", "Kontak"],
+    "rights": "All rights reserved.",
+    "madeWith": "Made with 🤍 in Indonesia",
+    "placeholderNote": "Seluruh kontak & harga di halaman ini adalah placeholder contoh."
+  },
+  "popup": {
+    "badge": "Penawaran Spesial 🎉",
+    "titleThanks": "Terima kasih!",
+    "descThanks": "Tim kami akan segera menghubungi Anda via WhatsApp untuk konfirmasi diskon.",
+    "close": "Tutup",
+    "title": "Klaim Sekarang & Dapatkan",
+    "titleAccent": "Diskon Booking!",
+    "desc": "Isi data di bawah dan tim kami langsung follow-up via WhatsApp.",
+    "nameLabel": "Nama Lengkap",
+    "namePlaceholder": "Budi Santoso",
+    "phoneLabel": "Nomor HP",
+    "phonePlaceholder": "0812-3456-7890",
+    "emailLabel": "Alamat Email",
+    "emailPlaceholder": "budi@email.com",
+    "submit": "Klaim Diskon",
+    "sending": "Mengirim...",
+    "error": "Gagal mengirim, coba lagi.",
+    "consent": "Dengan mengisi form ini, Anda setuju dihubungi tim kami via WhatsApp."
+  },
+  "wa": {
+    "chatNow": "Chat Sekarang"
+  }
+}

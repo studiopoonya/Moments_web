@@ -1,0 +1,242 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Poonya Moments design system.
+ * Brand: white #FFFFFF, sky blue #0F9BFD, deep blue #0077F9, cream #FFEDD3.
+ * Typography: elegant serif (Cormorant Garamond display / body serif).
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sky-brand: var(--sky-brand);
+  --color-deep-brand: var(--deep-brand);
+  --color-cream: var(--cream);
+  --color-cream-foreground: var(--cream-foreground);
+  --font-display: "Cormorant Garamond", "Calisto MT", Georgia, serif;
+  --font-sans: "Lora", "Calisto MT", Georgia, serif;
+  --font-serif: "Lora", Georgia, serif;
+}
+
+:root {
+  --radius: 1rem;
+
+  --sky-brand: oklch(0.71 0.163 240.2);
+  --deep-brand: oklch(0.6 0.204 254.6);
+  --cream: oklch(0.949 0.036 76.5);
+  --cream-foreground: oklch(0.28 0.06 255);
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.24 0.045 258);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.045 258);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.045 258);
+  --primary: oklch(0.6 0.204 254.6);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.96 0.02 240);
+  --secondary-foreground: oklch(0.3 0.07 255);
+  --muted: oklch(0.97 0.012 240);
+  --muted-foreground: oklch(0.55 0.035 250);
+  --accent: oklch(0.949 0.036 76.5);
+  --accent-foreground: oklch(0.28 0.06 255);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.92 0.015 245);
+  --input: oklch(0.92 0.015 245);
+  --ring: oklch(0.71 0.163 240.2);
+
+  /* Edge colors: identical at the top & bottom of each surface so stacked
+     sections never show a hard seam where the gradient restarts. */
+  --brand-edge: oklch(0.5 0.185 256);
+  --soft-edge: oklch(0.985 0.008 240);
+
+  --gradient-brand: linear-gradient(
+    180deg,
+    var(--brand-edge) 0%,
+    var(--sky-brand) 32%,
+    var(--deep-brand) 62%,
+    var(--brand-edge) 100%
+  );
+  --gradient-soft: linear-gradient(
+    180deg,
+    var(--soft-edge) 0%,
+    oklch(0.965 0.022 236) 50%,
+    var(--soft-edge) 100%
+  );
+
+  --shadow-elegant: 0 30px 70px -30px oklch(0.42 0.16 258 / 0.45);
+  --shadow-glow: 0 0 80px -10px oklch(0.71 0.163 240.2 / 0.55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Brand gradient surface with soft light bloom + corner lens flare */
+@utility brand-surface {
+  position: relative;
+  isolation: isolate;
+  background-image: var(--gradient-brand);
+  color: oklch(1 0 0);
+  overflow: hidden;
+
+  /* Light bloom kept well inside the section and masked at the edges so the
+     glow never collides with the neighbouring section's edge. */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+      radial-gradient(58% 46% at 50% 34%, oklch(1 0 0 / 0.3), transparent 68%),
+      radial-gradient(40% 34% at 8% 74%, oklch(1 0 0 / 0.14), transparent 72%),
+      radial-gradient(32% 30% at 94% 26%, oklch(0.949 0.036 76.5 / 0.24), transparent 74%);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, oklch(0 0 0) 18%, oklch(0 0 0) 82%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, oklch(0 0 0) 18%, oklch(0 0 0) 82%, transparent 100%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12%;
+    right: -12%;
+    width: 42%;
+    aspect-ratio: 1;
+    z-index: -1;
+    border-radius: 9999px;
+    background: radial-gradient(circle, oklch(1 0 0 / 0.24), transparent 64%);
+    filter: blur(48px);
+  }
+}
+
+@utility soft-surface {
+  background-image: var(--gradient-soft);
+}
+
+@utility glass-card {
+  background: oklch(1 0 0 / 0.1);
+  border: 1px solid oklch(1 0 0 / 0.22);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 24px 60px -32px oklch(0.2 0.1 258 / 0.6);
+}
+
+/* Clean, mostly-white card used across the post-hero sections — replaces the
+   heavy blue glass-card look everywhere except the hero/final-CTA bands. */
+@utility card-soft {
+  background: var(--color-card);
+  /* Reset text color explicitly — without this, a card-soft placed inside a
+     brand-surface section (white text on blue) inherits that white and
+     becomes invisible against its own white background. */
+  color: var(--color-card-foreground);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-3xl);
+  box-shadow: 0 1px 2px oklch(0.2 0.05 258 / 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility text-balance-tight {
+  text-wrap: balance;
+}
+
+/* Typing-animation caret */
+@keyframes caret-blink {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@utility animate-caret {
+  animation: caret-blink 1s step-end infinite;
+}
+
+/* Infinite marquee rows — content is duplicated in JSX, this scrolls exactly
+   one copy's width so the loop is seamless. Pause on hover so it's readable. */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+@utility animate-marquee-left {
+  animation: marquee-left 32s linear infinite;
+}
+@utility animate-marquee-right {
+  animation: marquee-right 32s linear infinite;
+}
+@utility pause-on-hover {
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Corkboard backdrop for the promotions collage — warm wood tone with a
+   subtle grain so the promo cards read as "pinned to a board". */
+@utility board-texture {
+  position: relative;
+  background-color: oklch(0.52 0.05 55);
+  background-image:
+    repeating-linear-gradient(115deg, oklch(1 0 0 / 0.035) 0px, transparent 2px, transparent 5px),
+    repeating-linear-gradient(25deg, oklch(0 0 0 / 0.035) 0px, transparent 2px, transparent 6px),
+    linear-gradient(155deg, oklch(0.58 0.055 55), oklch(0.44 0.045 50));
+  box-shadow: inset 0 0 90px oklch(0 0 0 / 0.35);
+}
+
+@utility pin-dot {
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  translate: -50% 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: radial-gradient(circle at 35% 30%, oklch(0.75 0.15 25), oklch(0.5 0.18 25));
+  box-shadow: 0 3px 5px oklch(0 0 0 / 0.4);
+}
