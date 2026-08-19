@@ -19,10 +19,11 @@ return [
 
     'allowed_methods' => ['*'],
 
-    // Frontend dev server (Vite). Add your production frontend domain here too.
+    // Frontend dev server (Vite) + production frontend domain.
     'allowed_origins' => [
         'http://localhost:5173',
         'http://127.0.0.1:5173',
+        'https://poonyamoments.studiopoonya.net',
     ],
 
     'allowed_origins_patterns' => [],
