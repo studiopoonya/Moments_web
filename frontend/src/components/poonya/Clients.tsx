@@ -47,8 +47,6 @@ export function Clients() {
           </div>
         </div>
       </Reveal>
-
-      <p className="mt-8 text-center text-xs text-muted-foreground">{t("clients.note")}</p>
     </section>
   );
 }

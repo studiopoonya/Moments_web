@@ -2,13 +2,16 @@
 
 namespace Database\Seeders;
 
+use App\Models\BookingStep;
 use App\Models\ClientBrand;
 use App\Models\Faq;
+use App\Models\HeroWord;
 use App\Models\Package;
 use App\Models\PortfolioItem;
 use App\Models\Product;
 use App\Models\SpecialOffer;
 use App\Models\Testimonial;
+use App\Models\WhyUsItem;
 use Illuminate\Database\Seeder;
 
 // Seeds the content that used to be hardcoded in the frontend's i18n files,
@@ -25,6 +28,9 @@ class ContentSeeder extends Seeder
         $this->seedPortfolio();
         $this->seedSpecialOffers();
         $this->seedFaqs();
+        $this->seedHeroWords();
+        $this->seedWhyUsItems();
+        $this->seedBookingSteps();
     }
 
     private function seedProducts(): void
@@ -179,6 +185,57 @@ class ContentSeeder extends Seeder
 
         foreach ($items as $i => $item) {
             Faq::create([...$item, 'sort_order' => $i]);
+        }
+    }
+
+    private function seedHeroWords(): void
+    {
+        if (HeroWord::count() > 0) {
+            return;
+        }
+
+        $words = ['Wedding', 'Birthday Party', 'Corporate Event', 'Community Event', 'Exhibition'];
+
+        foreach ($words as $i => $word) {
+            HeroWord::create(['word' => $word, 'sort_order' => $i]);
+        }
+    }
+
+    private function seedWhyUsItems(): void
+    {
+        if (WhyUsItem::count() > 0) {
+            return;
+        }
+
+        $items = [
+            ['icon' => 'HandHeart', 'title' => 'Heart to Heart Service', 'text' => 'Staff ramah dan profesional yang melayani tamu Anda dengan hangat.'],
+            ['icon' => 'BadgeCheck', 'title' => 'Premium tapi Affordable', 'text' => 'Kualitas kelas premium dengan harga yang tetap masuk akal.'],
+            ['icon' => 'Printer', 'title' => 'Print Berkualitas & Unlimited', 'text' => 'Cetak foto tajam, tahan lama, dan tanpa batas selama acara.'],
+            ['icon' => 'Sparkles', 'title' => 'Crew Berpengalaman', 'text' => 'Terbiasa menangani berbagai skala acara, dari intimate hingga gala.'],
+            ['icon' => 'Clock', 'title' => 'Setup Cepat', 'text' => 'Desain compact kami siap terpasang sekitar 30 menit sebelum acara dimulai.'],
+            ['icon' => 'Palette', 'title' => 'Custom Frame & Ring Light', 'text' => 'Template dan ring light disesuaikan dengan tema acara untuk hasil foto flawless.'],
+        ];
+
+        foreach ($items as $i => $item) {
+            WhyUsItem::create([...$item, 'sort_order' => $i]);
+        }
+    }
+
+    private function seedBookingSteps(): void
+    {
+        if (BookingStep::count() > 0) {
+            return;
+        }
+
+        $items = [
+            ['icon' => 'CalendarCheck', 'title' => 'Booking', 'text' => 'Pilih paket, tentukan tanggal acara, dan hubungi kami via WhatsApp atau isi form. Konfirmasi dalam 1×24 jam.'],
+            ['icon' => 'PartyPopper', 'title' => 'Persiapan', 'text' => 'Tim kami menyiapkan custom frame sesuai tema acara Anda. Setup peralatan 30 menit sebelum acara dimulai.'],
+            ['icon' => 'Camera', 'title' => 'Sesi Foto', 'text' => 'Tamu bebas berfoto sepuasnya! Crew kami siap membantu, dengan properti lucu dan lighting profesional.'],
+            ['icon' => 'Share2', 'title' => 'Cetak & Share', 'text' => 'Foto langsung dicetak di tempat dan file digital dikirim via QR Code atau email. Kenangan siap dibawa pulang!'],
+        ];
+
+        foreach ($items as $i => $item) {
+            BookingStep::create([...$item, 'sort_order' => $i]);
         }
     }
 }

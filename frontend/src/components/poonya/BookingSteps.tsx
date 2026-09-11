@@ -1,18 +1,19 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { CalendarCheck, PartyPopper, Camera, Share2 } from "lucide-react";
 
 import { Reveal } from "@/components/poonya/Reveal";
+import { getIcon } from "@/lib/iconRegistry";
+import { useApiList } from "@/lib/useApiList";
+import type { BookingStepT } from "@/lib/api";
 
-const icons = [CalendarCheck, PartyPopper, Camera, Share2];
 const chips = ["bg-sky-100 text-sky-600", "bg-violet-100 text-violet-600", "bg-emerald-100 text-emerald-600", "bg-amber-100 text-amber-600"];
 const badges = ["bg-sky-500", "bg-violet-500", "bg-emerald-500", "bg-amber-500"];
 
-type Step = { title: string; text: string };
-
 export function BookingSteps() {
   const { t } = useTranslation();
-  const steps = t("booking.steps", { returnObjects: true }) as unknown as Step[];
+  const { items: steps } = useApiList<BookingStepT>("/booking-steps");
+
+  if (steps.length === 0) return null;
 
   return (
     <section id="cara-booking" className="bg-background py-24 sm:py-28">
@@ -38,9 +39,9 @@ export function BookingSteps() {
 
           <div className="grid gap-10 sm:grid-cols-4 sm:gap-6">
             {steps.map((s, i) => {
-              const Icon = icons[i % icons.length];
+              const Icon = getIcon(s.icon);
               return (
-                <Reveal key={s.title} delay={i * 0.15}>
+                <Reveal key={s.id} delay={i * 0.15}>
                   <motion.div
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}

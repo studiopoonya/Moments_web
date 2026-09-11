@@ -79,8 +79,6 @@ export function Testimonials() {
           </div>
         ) : null}
       </div>
-
-      <p className="mt-8 text-center text-xs text-muted-foreground">{t("testimonials.note")}</p>
     </section>
   );
 }

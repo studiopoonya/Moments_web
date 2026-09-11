@@ -32,6 +32,12 @@ const AdminFaqs = lazy(() => import("@/pages/admin/AdminFaqs").then((m) => ({ de
 const AdminClaimOffer = lazy(() =>
   import("@/pages/admin/AdminClaimOffer").then((m) => ({ default: m.AdminClaimOffer })),
 );
+const AdminHero = lazy(() => import("@/pages/admin/AdminHero").then((m) => ({ default: m.AdminHero })));
+const AdminAbout = lazy(() => import("@/pages/admin/AdminAbout").then((m) => ({ default: m.AdminAbout })));
+const AdminWhyUs = lazy(() => import("@/pages/admin/AdminWhyUs").then((m) => ({ default: m.AdminWhyUs })));
+const AdminBookingSteps = lazy(() =>
+  import("@/pages/admin/AdminBookingSteps").then((m) => ({ default: m.AdminBookingSteps })),
+);
 
 function AdminFallback() {
   return (
@@ -74,6 +80,10 @@ function App() {
           <Route path="/admin/special-offers" element={protectedPage(AdminSpecialOffers)} />
           <Route path="/admin/faqs" element={protectedPage(AdminFaqs)} />
           <Route path="/admin/claim-offer" element={protectedPage(AdminClaimOffer)} />
+          <Route path="/admin/hero" element={protectedPage(AdminHero)} />
+          <Route path="/admin/about" element={protectedPage(AdminAbout)} />
+          <Route path="/admin/why-us" element={protectedPage(AdminWhyUs)} />
+          <Route path="/admin/booking-steps" element={protectedPage(AdminBookingSteps)} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

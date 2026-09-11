@@ -8,6 +8,9 @@ import { ProductImageSlot } from "@/components/poonya/ProductImageSlot";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/poonya/Reveal";
 import { RolodexText } from "@/components/poonya/RolodexText";
 import { StatsBar } from "@/components/poonya/StatsBar";
+import { useApiList } from "@/lib/useApiList";
+import { heroSettingApi, aboutSettingApi, type HeroSettingT, type HeroWordT, type AboutSettingT } from "@/lib/api";
+import { useEffect, useState } from "react";
 import { ProductShowcase } from "@/components/poonya/ProductShowcase";
 import { WhyChooseUs } from "@/components/poonya/WhyChooseUs";
 import { BookingSteps } from "@/components/poonya/BookingSteps";
@@ -25,10 +28,6 @@ import { Footer } from "@/components/poonya/Footer";
 import { PromoPopup } from "@/components/poonya/PromoPopup";
 import { WhatsAppFab } from "@/components/poonya/WhatsAppFab";
 
-// SLOT FOTO PRODUK — isi dengan foto asli nanti:
-// import heroProductImage from "@/assets/hero-photobooth.jpg";
-const heroProductImage: string | undefined = undefined;
-
 // Set true untuk menampilkan lagi section "Jenis Event".
 const SHOW_EVENT_TYPES = false;
 
@@ -44,6 +43,25 @@ export function Landing() {
   const { t } = useTranslation();
   const events = t("events.items", { returnObjects: true }) as unknown as EventItem[];
 
+  const [hero, setHero] = useState<HeroSettingT | null>(null);
+  const { items: heroWords } = useApiList<HeroWordT>("/hero-words");
+  const [about, setAbout] = useState<AboutSettingT | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    heroSettingApi.getPublic().then((data) => {
+      if (!cancelled) setHero(data);
+    }).catch(() => undefined);
+    aboutSettingApi.getPublic().then((data) => {
+      if (!cancelled) setAbout(data);
+    }).catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const rolodexWords = heroWords.length > 0 ? heroWords.map((w) => w.word) : events.map((e) => e.title);
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -56,42 +74,41 @@ export function Landing() {
           <div className="text-center lg:text-left">
             <Reveal>
               <p className="font-display text-2xl font-semibold tracking-wide sm:text-3xl">
-                {t("hero.brandName")}
+                {hero?.brand_name || t("hero.brandName")}
               </p>
               <p className="mt-1 text-[11px] italic tracking-[0.28em] text-cream/85 uppercase">
-                {t("hero.brandSub")}
+                {hero?.brand_sub || t("hero.brandSub")}
               </p>
             </Reveal>
             <Reveal delay={0.15}>
               <h1 className="mt-8 min-h-[3.6em] font-display text-3xl italic leading-[1.2] text-balance-tight sm:min-h-[2.6em] sm:text-5xl">
-                {t("hero.taglinePrefix")}{" "}
-                <RolodexText words={events.map((e) => e.title)} className="text-cream" />
+                {hero?.tagline_prefix || t("hero.taglinePrefix")}{" "}
+                <RolodexText words={rolodexWords} className="text-cream" />
               </h1>
             </Reveal>
             <Reveal delay={0.3}>
               <p className="mx-auto mt-6 max-w-md text-base text-white/85 sm:text-lg lg:mx-0">
-                {t("hero.subtitle")}
+                {hero?.subtitle || t("hero.subtitle")}
               </p>
             </Reveal>
             <Reveal delay={0.45}>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
                 <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.4 }}>
                   <Button asChild variant="hero" size="xl">
-                    <a href="#kontak">{t("hero.ctaBooking")}</a>
+                    <a href="#kontak">{hero?.cta_booking_label || t("hero.ctaBooking")}</a>
                   </Button>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.4 }}>
                   <Button asChild variant="heroOutline" size="xl">
-                    <a href="#paket">{t("hero.ctaPaket")}</a>
+                    <a href="#paket">{hero?.cta_paket_label || t("hero.ctaPaket")}</a>
                   </Button>
                 </motion.div>
               </div>
             </Reveal>
           </div>
 
-          {/* Ganti `heroProductImage` dengan foto produk asli nanti */}
           <ProductImageSlot
-            src={heroProductImage}
+            src={hero?.image_url ?? undefined}
             alt={t("hero.productAlt")}
             hint={t("hero.productHint")}
           />
@@ -110,14 +127,14 @@ export function Landing() {
       <section id="tentang" className="bg-background py-24 sm:py-28">
         <div className="mx-auto max-w-3xl px-5 text-center">
           <Reveal>
-            <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">{t("about.eyebrow")}</p>
-            <h2 className="mt-5 font-display text-3xl text-foreground sm:text-4xl">{t("about.title")}</h2>
+            <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">{about?.eyebrow || t("about.eyebrow")}</p>
+            <h2 className="mt-5 font-display text-3xl text-foreground sm:text-4xl">{about?.title || t("about.title")}</h2>
           </Reveal>
           <Reveal delay={0.15}>
-            <p className="mt-6 leading-relaxed text-muted-foreground">{t("about.body")}</p>
+            <p className="mt-6 leading-relaxed text-muted-foreground">{about?.body || t("about.body")}</p>
           </Reveal>
           <Reveal delay={0.3}>
-            <p className="mt-8 font-display text-2xl italic text-primary">{t("about.quote")}</p>
+            <p className="mt-8 font-display text-2xl italic text-primary">{about?.quote || t("about.quote")}</p>
           </Reveal>
         </div>
       </section>

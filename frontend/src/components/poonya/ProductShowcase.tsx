@@ -29,7 +29,7 @@ function ProductCard({
     <div ref={cardRef} className="sticky top-20 flex h-[68vh] items-center justify-center sm:h-[74vh]">
       <motion.div
         style={{ scale, top: `calc(-5vh + ${index * 22}px)` }}
-        className="card-soft relative grid w-full max-w-5xl origin-top gap-8 overflow-hidden p-6 shadow-elegant sm:p-10 lg:grid-cols-2 lg:gap-12"
+        className="card-soft relative grid w-full max-w-5xl origin-top gap-4 overflow-hidden p-5 shadow-elegant sm:gap-8 sm:p-10 lg:grid-cols-2 lg:gap-12"
       >
         <ProductImageSlot
           tone="light"
@@ -37,6 +37,7 @@ function ProductCard({
           src={product.image_url ?? undefined}
           label={product.badge}
           hint={product.name}
+          ratio="aspect-[16/9] lg:aspect-[4/5]"
         />
         <div className="flex flex-col justify-center">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-3 py-1 text-[11px] font-semibold tracking-widest text-primary uppercase">
@@ -45,11 +46,11 @@ function ProductCard({
               0{index + 1}/0{total}
             </span>
           </span>
-          <h3 className="mt-4 font-display text-2xl text-foreground sm:text-3xl">{product.name}</h3>
-          <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">{product.description}</p>
+          <h3 className="mt-2 font-display text-2xl text-foreground sm:mt-4 sm:text-3xl">{product.name}</h3>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground sm:mt-4 sm:text-base">{product.description}</p>
 
           {product.tags.length > 0 ? (
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-2 sm:mt-6">
               {product.tags.map((tag) => (
                 <span key={tag} className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
                   {tag}

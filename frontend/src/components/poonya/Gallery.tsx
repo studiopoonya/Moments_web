@@ -17,7 +17,6 @@ export function Gallery() {
         <Reveal>
           <p className="text-xs tracking-[0.3em] text-muted-foreground uppercase">{t("gallery.eyebrow")}</p>
           <h2 className="mt-5 font-display text-3xl text-foreground sm:text-4xl">{t("gallery.title")}</h2>
-          <p className="mt-3 text-sm text-muted-foreground">{t("gallery.note")}</p>
         </Reveal>
       </div>
 

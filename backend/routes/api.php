@@ -1,8 +1,12 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\AboutSettingController;
 use App\Http\Controllers\Api\Admin\AuthController;
+use App\Http\Controllers\Api\Admin\BookingStepController;
 use App\Http\Controllers\Api\Admin\ClientController;
 use App\Http\Controllers\Api\Admin\FaqController;
+use App\Http\Controllers\Api\Admin\HeroSettingController;
+use App\Http\Controllers\Api\Admin\HeroWordController;
 use App\Http\Controllers\Api\Admin\LeadController as AdminLeadController;
 use App\Http\Controllers\Api\Admin\PackageController;
 use App\Http\Controllers\Api\Admin\PopupSettingController;
@@ -10,8 +14,11 @@ use App\Http\Controllers\Api\Admin\PortfolioController;
 use App\Http\Controllers\Api\Admin\ProductController;
 use App\Http\Controllers\Api\Admin\SpecialOfferController;
 use App\Http\Controllers\Api\Admin\TestimonialController;
+use App\Http\Controllers\Api\Admin\WaClickController as AdminWaClickController;
+use App\Http\Controllers\Api\Admin\WhyUsItemController;
 use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\PublicContentController;
+use App\Http\Controllers\Api\WaClickController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,6 +30,7 @@ Route::get('/health', function (Request $request) {
 });
 
 Route::post('/leads', [LeadController::class, 'store']);
+Route::post('/wa-clicks', [WaClickController::class, 'store']);
 
 // Public, read-only — the landing page fetches its dynamic content from here.
 Route::get('/products', [PublicContentController::class, 'products']);
@@ -33,6 +41,11 @@ Route::get('/portfolio', [PublicContentController::class, 'portfolio']);
 Route::get('/special-offers', [PublicContentController::class, 'specialOffers']);
 Route::get('/faqs', [PublicContentController::class, 'faqs']);
 Route::get('/popup-settings', [PublicContentController::class, 'popupSettings']);
+Route::get('/hero-settings', [PublicContentController::class, 'heroSettings']);
+Route::get('/hero-words', [PublicContentController::class, 'heroWords']);
+Route::get('/about-settings', [PublicContentController::class, 'aboutSettings']);
+Route::get('/why-us-items', [PublicContentController::class, 'whyUsItems']);
+Route::get('/booking-steps', [PublicContentController::class, 'bookingSteps']);
 
 Route::prefix('admin')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
@@ -86,5 +99,28 @@ Route::prefix('admin')->group(function () {
 
         Route::get('/popup-settings', [PopupSettingController::class, 'show']);
         Route::put('/popup-settings', [PopupSettingController::class, 'update']);
+
+        Route::get('/hero-settings', [HeroSettingController::class, 'show']);
+        Route::put('/hero-settings', [HeroSettingController::class, 'update']);
+
+        Route::get('/hero-words', [HeroWordController::class, 'index']);
+        Route::post('/hero-words', [HeroWordController::class, 'store']);
+        Route::put('/hero-words/{heroWord}', [HeroWordController::class, 'update']);
+        Route::delete('/hero-words/{heroWord}', [HeroWordController::class, 'destroy']);
+
+        Route::get('/about-settings', [AboutSettingController::class, 'show']);
+        Route::put('/about-settings', [AboutSettingController::class, 'update']);
+
+        Route::get('/why-us-items', [WhyUsItemController::class, 'index']);
+        Route::post('/why-us-items', [WhyUsItemController::class, 'store']);
+        Route::put('/why-us-items/{whyUsItem}', [WhyUsItemController::class, 'update']);
+        Route::delete('/why-us-items/{whyUsItem}', [WhyUsItemController::class, 'destroy']);
+
+        Route::get('/booking-steps', [BookingStepController::class, 'index']);
+        Route::post('/booking-steps', [BookingStepController::class, 'store']);
+        Route::put('/booking-steps/{bookingStep}', [BookingStepController::class, 'update']);
+        Route::delete('/booking-steps/{bookingStep}', [BookingStepController::class, 'destroy']);
+
+        Route::get('/wa-clicks/count', [AdminWaClickController::class, 'count']);
     });
 });

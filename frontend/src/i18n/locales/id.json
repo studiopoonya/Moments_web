@@ -168,14 +168,12 @@
   "clients": {
     "eyebrow": "Our Clients",
     "title": "Dipercaya oleh brand & klien ternama",
-    "note": "*Nama brand contoh dari portofolio event sebelumnya",
     "names": ["Moeloet", "Tiki", "Nutana", "Cinepolis", "Trueve Makeup", "Bridestory Market"]
   },
   "testimonials": {
     "eyebrow": "Testimoni",
     "title": "Dipercaya oleh klien yang puas",
     "subtitle": "Cerita dari sebagian klien yang sudah menggunakan Poonya Moments di acara mereka.",
-    "note": "*Testimoni contoh — akan diganti dengan review asli dari klien.",
     "row1": [
       { "name": "Amanda Putri", "handle": "@amandaputri", "text": "Fotonya bagus banget dan hasil print-nya rapi. Crew-nya juga ramah, on time pula!" },
       { "name": "Rizky Firmansyah", "handle": "@rizkyf", "text": "Booth-nya compact tapi kualitas fotonya premium. Tamu wedding kami betah antre foto." },
@@ -192,7 +190,6 @@
   "gallery": {
     "eyebrow": "Portfolio",
     "title": "Momen yang sudah kami abadikan",
-    "note": "*Contoh layout — foto akan diganti dengan dokumentasi asli klien.",
     "items": [
       "The Wedding of Andika & Monic",
       "Tiki 55th Anniversary",

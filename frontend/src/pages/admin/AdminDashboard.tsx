@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { Inbox, Mail, MessageSquare, RefreshCw, Search, Trash2, Users } from "lucide-react";
+import { Inbox, Mail, MessageCircle, MessageSquare, RefreshCw, Search, Trash2, Users } from "lucide-react";
 
 import { AdminLayout } from "@/components/admin/AdminLayout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getAdminToken } from "@/lib/auth";
-import { deleteLead, fetchLeads, type Lead, type LeadSource } from "@/lib/api";
+import { deleteLead, fetchLeads, waClickApi, type Lead, type LeadSource } from "@/lib/api";
 
 const SOURCE_LABEL: Record<LeadSource, string> = {
   contact_form: "Contact Form",
@@ -55,6 +55,7 @@ export function AdminDashboard() {
   const [filter, setFilter] = useState<SourceFilter>("all");
   const [search, setSearch] = useState("");
   const [deletingId, setDeletingId] = useState<number | null>(null);
+  const [waClicks, setWaClicks] = useState(0);
 
   async function load() {
     const token = getAdminToken();
@@ -73,6 +74,8 @@ export function AdminDashboard() {
 
   useEffect(() => {
     load();
+    const token = getAdminToken();
+    if (token) waClickApi.count(token).then(setWaClicks).catch(() => undefined);
   }, []);
 
   async function handleDelete(id: number) {
@@ -120,6 +123,7 @@ export function AdminDashboard() {
     { label: "Dari Contact Form", value: stats.contact, icon: Mail, chip: "bg-sky-100", iconColor: "text-sky-600" },
     { label: "Dari Promo Popup", value: stats.promo, icon: MessageSquare, chip: "bg-amber-100", iconColor: "text-amber-600" },
     { label: "Masuk Hari Ini", value: stats.today, icon: RefreshCw, chip: "bg-emerald-100", iconColor: "text-emerald-600" },
+    { label: "Klik Tombol WhatsApp", value: waClicks, icon: MessageCircle, chip: "bg-teal-100", iconColor: "text-teal-600" },
   ];
 
   return (
@@ -129,7 +133,7 @@ export function AdminDashboard() {
         initial="hidden"
         animate="show"
         variants={{ show: { transition: { staggerChildren: 0.06 } } }}
-        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5"
       >
         {statCards.map((s) => (
           <motion.div

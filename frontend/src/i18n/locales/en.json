@@ -168,14 +168,12 @@
   "clients": {
     "eyebrow": "Our Clients",
     "title": "Trusted by well-known brands & clients",
-    "note": "*Example brand names from past event portfolios",
     "names": ["Moeloet", "Tiki", "Nutana", "Cinepolis", "Trueve Makeup", "Bridestory Market"]
   },
   "testimonials": {
     "eyebrow": "Testimonials",
     "title": "Trusted by happy clients",
     "subtitle": "Stories from some of the clients who've used Poonya Moments at their events.",
-    "note": "*Example testimonials — will be replaced with real client reviews.",
     "row1": [
       { "name": "Amanda Putri", "handle": "@amandaputri", "text": "The photos turned out great and the prints were neat. The crew was friendly and on time too!" },
       { "name": "Rizky Firmansyah", "handle": "@rizkyf", "text": "The booth is compact but the photo quality is premium. Our wedding guests kept lining up for photos." },
@@ -192,7 +190,6 @@
   "gallery": {
     "eyebrow": "Portfolio",
     "title": "Moments we've already captured",
-    "note": "*Example layout — photos will be replaced with real client documentation.",
     "items": [
       "The Wedding of Andika & Monic",
       "Tiki 55th Anniversary",

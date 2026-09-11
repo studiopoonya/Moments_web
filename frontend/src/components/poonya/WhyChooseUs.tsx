@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { HandHeart, BadgeCheck, Printer, Sparkles, Clock, Palette } from "lucide-react";
 
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/poonya/Reveal";
+import { getIcon } from "@/lib/iconRegistry";
+import { useApiList } from "@/lib/useApiList";
+import type { WhyUsItemT } from "@/lib/api";
 
-const icons = [HandHeart, BadgeCheck, Printer, Sparkles, Clock, Palette];
 const chips = [
   "bg-rose-100 text-rose-500",
   "bg-sky-100 text-sky-500",
@@ -14,11 +15,11 @@ const chips = [
   "bg-indigo-100 text-indigo-600",
 ];
 
-type Reason = { title: string; text: string };
-
 export function WhyChooseUs() {
   const { t } = useTranslation();
-  const reasons = t("whyus.items", { returnObjects: true }) as unknown as Reason[];
+  const { items: reasons } = useApiList<WhyUsItemT>("/why-us-items");
+
+  if (reasons.length === 0) return null;
 
   return (
     <section className="bg-muted/40 py-24 sm:py-28">
@@ -33,9 +34,9 @@ export function WhyChooseUs() {
 
         <StaggerGroup className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {reasons.map((r, i) => {
-            const Icon = icons[i % icons.length];
+            const Icon = getIcon(r.icon);
             return (
-              <StaggerItem key={r.title}>
+              <StaggerItem key={r.id}>
                 <motion.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}

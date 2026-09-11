@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import { WhatsAppIcon } from "@/components/poonya/icons";
+import { waClickApi } from "@/lib/api";
 
 const WA_LINK = "https://wa.me/6281200000000"; // placeholder
 
@@ -30,6 +31,7 @@ export function WhatsAppFab() {
         target="_blank"
         rel="noreferrer"
         aria-label="Chat via WhatsApp"
+        onClick={() => waClickApi.track()}
         className="relative grid size-14 shrink-0 place-items-center rounded-full bg-[#25D366] text-white shadow-elegant transition-transform hover:scale-105"
       >
         <span className="absolute inset-0 animate-ping rounded-full bg-[#25D366]/60" aria-hidden />

@@ -175,6 +175,47 @@ export type PopupSettingT = {
   consent_text: string | null;
 };
 
+export type HeroSettingT = {
+  id: number;
+  brand_name: string;
+  brand_sub: string | null;
+  tagline_prefix: string | null;
+  subtitle: string | null;
+  cta_booking_label: string | null;
+  cta_paket_label: string | null;
+  image_url: string | null;
+};
+
+export type HeroWordT = {
+  id: number;
+  word: string;
+  sort_order: number;
+};
+
+export type AboutSettingT = {
+  id: number;
+  eyebrow: string | null;
+  title: string;
+  body: string | null;
+  quote: string | null;
+};
+
+export type WhyUsItemT = {
+  id: number;
+  icon: string;
+  title: string;
+  text: string | null;
+  sort_order: number;
+};
+
+export type BookingStepT = {
+  id: number;
+  icon: string;
+  title: string;
+  text: string | null;
+  sort_order: number;
+};
+
 export async function fetchPublic<T>(path: string): Promise<T[]> {
   const res = await fetch(`${API_BASE}${path}`, { headers: { Accept: "application/json" } });
   const body = await parseJsonOrThrow(res);
@@ -235,6 +276,9 @@ export const testimonialsApi = resource<TestimonialItem>("/testimonials", "/admi
 export const portfolioApi = resource<PortfolioItemT>("/portfolio", "/admin/portfolio");
 export const specialOffersApi = resource<SpecialOfferItem>("/special-offers", "/admin/special-offers");
 export const faqsApi = resource<FaqItemT>("/faqs", "/admin/faqs");
+export const heroWordsApi = resource<HeroWordT>("/hero-words", "/admin/hero-words");
+export const whyUsApi = resource<WhyUsItemT>("/why-us-items", "/admin/why-us-items");
+export const bookingStepsApi = resource<BookingStepT>("/booking-steps", "/admin/booking-steps");
 
 export const popupSettingApi = {
   getPublic: () => fetchPublicOne<PopupSettingT>("/popup-settings"),
@@ -257,5 +301,57 @@ export const popupSettingApi = {
     });
     const body = await parseJsonOrThrow(res);
     return body.data;
+  },
+};
+
+export const heroSettingApi = {
+  getPublic: () => fetchPublicOne<HeroSettingT>("/hero-settings"),
+  get: async (token: string): Promise<HeroSettingT> => {
+    const res = await fetch(`${API_BASE}/admin/hero-settings`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/json" },
+    });
+    const body = await parseJsonOrThrow(res);
+    return body.data;
+  },
+  update: async (token: string, form: FormData): Promise<HeroSettingT> => {
+    form.append("_method", "PUT");
+    return adminSubmit<HeroSettingT>(token, "/admin/hero-settings", form);
+  },
+};
+
+export const aboutSettingApi = {
+  getPublic: () => fetchPublicOne<AboutSettingT>("/about-settings"),
+  get: async (token: string): Promise<AboutSettingT> => {
+    const res = await fetch(`${API_BASE}/admin/about-settings`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/json" },
+    });
+    const body = await parseJsonOrThrow(res);
+    return body.data;
+  },
+  update: async (token: string, data: Record<string, string>): Promise<AboutSettingT> => {
+    const res = await fetch(`${API_BASE}/admin/about-settings`, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    const body = await parseJsonOrThrow(res);
+    return body.data;
+  },
+};
+
+export const waClickApi = {
+  track: () => {
+    fetch(`${API_BASE}/wa-clicks`, { method: "POST", headers: { Accept: "application/json" } }).catch(() => undefined);
+  },
+  count: async (token: string): Promise<number> => {
+    const res = await fetch(`${API_BASE}/admin/wa-clicks/count`, {
+      headers: { Authorization: `Bearer ${token}`, Accept: "application/json" },
+    });
+    const body = await parseJsonOrThrow(res);
+    return body.total;
   },
 };

@@ -1,17 +1,21 @@
 import { useState, type ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import {
+  Award,
   Boxes,
   Building2,
   ExternalLink,
   GalleryHorizontal,
   Gift,
   HelpCircle,
+  Image,
   LayoutDashboard,
+  ListChecks,
   LogOut,
   Menu,
   MessageSquareQuote,
   Percent,
+  Sparkles,
   Tag,
   X,
 } from "lucide-react";
@@ -20,7 +24,11 @@ import { useAuth } from "@/lib/auth";
 
 const navItems = [
   { to: "/admin", label: "Dashboard", icon: LayoutDashboard },
+  { to: "/admin/hero", label: "Hero", icon: Image },
+  { to: "/admin/about", label: "Tentang Produk", icon: Sparkles },
   { to: "/admin/products", label: "Product", icon: Boxes },
+  { to: "/admin/why-us", label: "Kenapa Pilih Kami", icon: Award },
+  { to: "/admin/booking-steps", label: "Cara Kerja", icon: ListChecks },
   { to: "/admin/packages", label: "Price Package", icon: Tag },
   { to: "/admin/clients", label: "Our Client", icon: Building2 },
   { to: "/admin/testimonials", label: "Testimoni", icon: MessageSquareQuote },
