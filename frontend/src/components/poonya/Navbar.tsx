@@ -4,16 +4,20 @@ import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/poonya/LanguageSwitcher";
+import { useApiList } from "@/lib/useApiList";
+import type { SpecialOfferItem } from "@/lib/api";
 
 export function Navbar() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
+  const { items: offers } = useApiList<SpecialOfferItem>("/special-offers");
 
   const links = [
     { label: t("nav.tentang"), href: "#tentang" },
     { label: t("nav.layanan"), href: "#layanan" },
     { label: t("nav.galeri"), href: "#galeri" },
     { label: t("nav.paket"), href: "#paket" },
+    ...(offers.length > 0 ? [{ label: t("nav.promo"), href: "#promo" }] : []),
     { label: t("nav.kontak"), href: "#kontak" },
   ];
 
