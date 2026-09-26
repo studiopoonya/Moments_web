@@ -261,8 +261,6 @@
     "sending": "Mengirim...",
     "sent": "Terkirim! Kami akan segera menghubungi Anda.",
     "error": "Gagal mengirim, coba lagi atau hubungi kami via WhatsApp.",
-    "placeholderNote": "*Nomor & alamat masih placeholder.",
-    "mapNote": "*Alamat contoh, akan diperbarui.",
     "studioLabel": "Studio Poonya"
   },
   "finalCta": {

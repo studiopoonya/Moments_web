@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { WhatsAppIcon } from "@/components/poonya/icons";
 import { waClickApi } from "@/lib/api";
 
-const WA_LINK = "https://wa.me/6281200000000"; // placeholder
+const WA_LINK = "https://wa.me/6288901733091";
 
 export function WhatsAppFab() {
   const { t } = useTranslation();

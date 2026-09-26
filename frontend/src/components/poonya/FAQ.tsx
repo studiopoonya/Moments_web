@@ -66,7 +66,7 @@ export function FAQ() {
         <Reveal delay={0.15} className="mt-10 text-center">
           <p className="text-sm text-muted-foreground">{t("faq.moreQuestion")}</p>
           <Button asChild variant="brand" className="mt-4 rounded-full">
-            <a href="https://wa.me/6281200000000" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/6288901733091" target="_blank" rel="noreferrer">
               {t("faq.askWa")}
             </a>
           </Button>

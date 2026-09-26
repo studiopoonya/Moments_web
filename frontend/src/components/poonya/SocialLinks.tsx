@@ -7,7 +7,7 @@ import { TikTokIcon, WhatsAppIcon } from "@/components/poonya/icons";
 
 const IG_LINK = "https://instagram.com/poonyamoments"; // placeholder
 const TIKTOK_LINK = "https://tiktok.com/@poonyamoments"; // placeholder
-const WA_LINK = "https://wa.me/6281200000000"; // placeholder
+const WA_LINK = "https://wa.me/6288901733091";
 
 const links = [
   { href: IG_LINK, label: "Instagram", icon: Instagram, bg: "hover:bg-[#E1306C]" },

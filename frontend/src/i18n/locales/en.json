@@ -261,8 +261,6 @@
     "sending": "Sending...",
     "sent": "Sent! We'll get back to you shortly.",
     "error": "Failed to send, please try again or contact us via WhatsApp.",
-    "placeholderNote": "*Phone number & address are still placeholders.",
-    "mapNote": "*Example address, will be updated.",
     "studioLabel": "Studio Poonya"
   },
   "finalCta": {

@@ -3,10 +3,10 @@ import { Instagram, Mail } from "lucide-react";
 
 import { TikTokIcon, WhatsAppIcon } from "@/components/poonya/icons";
 
-const WA_LINK = "https://wa.me/6281200000000"; // placeholder
+const WA_LINK = "https://wa.me/6288901733091";
 const IG_LINK = "https://instagram.com/poonyamoments"; // placeholder
 const TIKTOK_LINK = "https://tiktok.com/@poonyamoments"; // placeholder
-const EMAIL = "hello@poonyamoments.id"; // placeholder
+const EMAIL = "studiopoonya@gmail.com";
 
 const anchors = ["#paket", "#paket", "#paket", "#kontak"];
 const infoAnchors = ["#tentang", "#cara-booking", "#faq", "#kontak"];

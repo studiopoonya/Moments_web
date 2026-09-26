@@ -9,13 +9,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { submitLead } from "@/lib/api";
 
-const WA_NUMBER = "+62 812-0000-0000"; // placeholder
+const WA_NUMBER = "+62 889-0173-3091";
 const IG_HANDLE = "@poonyamoments"; // placeholder
 const TIKTOK_LINK = "https://tiktok.com/@poonyamoments"; // placeholder
-const EMAIL = "hello@poonyamoments.id"; // placeholder
-const ADDRESS = "Jl. Contoh Raya No. 123, Jakarta Selatan"; // placeholder — ganti alamat asli
-// Placeholder Jakarta pin — swap the query for the real studio address.
-const MAP_SRC = "https://www.google.com/maps?q=Jakarta+Selatan&output=embed";
+const EMAIL = "studiopoonya@gmail.com";
+const ADDRESS = "Rumah Poonya by Studio Poonya, Jl. Sawo V No.11, RT.010/RW.020, Pejuang, Kec. Medan Satria, Kota Bekasi, Jawa Barat 17131";
+const MAP_SRC =
+  "https://www.google.com/maps?q=Rumah+Poonya+by+Studio+Poonya,+Jl.+Sawo+V+No.11,+Pejuang,+Medan+Satria,+Bekasi&output=embed";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -60,7 +60,6 @@ export function ContactSection() {
                 <MapPin className="size-3.5" /> {t("contact.studioLabel")}
               </p>
               <p className="mt-2 text-sm text-foreground">{ADDRESS}</p>
-              <p className="mt-2 text-xs text-muted-foreground">{t("contact.mapNote")}</p>
             </div>
           </div>
 
@@ -88,7 +87,7 @@ export function ContactSection() {
                   <TikTokIcon className="size-4 text-primary" />
                 </a>
                 <a
-                  href="https://wa.me/6281200000000"
+                  href="https://wa.me/6288901733091"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="WhatsApp"
@@ -153,7 +152,6 @@ export function ContactSection() {
               <p className="flex items-center gap-2">
                 <Mail className="size-3.5" /> {EMAIL}
               </p>
-              <p className="mt-2">{t("contact.placeholderNote")}</p>
             </div>
           </div>
         </div>

@@ -46,7 +46,7 @@ export function FinalCta() {
               size="xl"
               className="rounded-full border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
-              <a href="https://wa.me/6281200000000" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/6288901733091" target="_blank" rel="noreferrer">
                 <MessageCircle className="size-4" /> {t("finalCta.waBtn")}
               </a>
             </Button>
